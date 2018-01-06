@@ -1,0 +1,41 @@
+package am.andranik.semicirclelayoutmanger.scroller;
+
+import android.view.View;
+
+/**
+ * Created by andranik on 9/21/16.
+ */
+
+public interface ScrollHandlerCallback {
+    int getChildCount();
+
+    View getChildAt(int index);
+
+    int getWidth();
+
+    int getFirstVisiblePosition();
+
+    int getDecoratedTop(View view);
+
+    int getPaddingTop();
+
+    int getLastVisiblePosition();
+
+    int getItemCount();
+
+    void removeView(View view);
+
+    void incrementFirstVisiblePosition();
+
+    void incrementLastVisiblePosition();
+
+    void addView(View view);
+
+    void decrementLastVisiblePosition();
+
+    void decrementFirstVisiblePosition();
+
+    void addView(View newFirstView, int position);
+
+    boolean isEndlessScrollEnabled();
+}
